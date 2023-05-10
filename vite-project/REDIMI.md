@@ -54,3 +54,14 @@ create ``.babelrc.json `` add:
 }
 ```
 
+## StoryBook
+
+instal ``npx sb init``
+
+ add in folder storybook ``main.js``
+```
+stories: [
+    '../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/**/*.mdx', '../src/**/stories.@(js|jsx|ts|tsx)'
+  ],
+```
