@@ -1,4 +1,11 @@
-import * as Style from './style';
-const Heading = ({ children }) => {
-<Style.Heading>{children}</Style.Heading>;
+import * as Style from './styles'
+
+
+export const Heading = ({ children }) => {
+return (
+  <Style.Title>
+  <div>{children}</div>
+  <input type="button" value="Input" />
+  </Style.Title>
+  );
 }
