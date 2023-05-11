@@ -12,3 +12,12 @@ const preview = {
 };
 
 export default preview;
+
+
+export const define([
+  'require',
+  'dependency'
+], function(require, factory) {
+  'use strict';
+
+});
