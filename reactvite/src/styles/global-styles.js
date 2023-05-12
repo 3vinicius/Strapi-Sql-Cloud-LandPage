@@ -1,5 +1,6 @@
-import { css } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans', sans-serif;
 
 export const GlobalStyles = createGlobalStyle`
   *{
@@ -8,9 +9,17 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body{
-    ${({ theme }) => css`
-      background: ${theme.colors.mainBg};
-    `}
+  html{
+    font-size: 62.5%;
   }
+
+  body{
+    font-size: 1.6rem;
+    font-family:${({ theme }) => theme.fonts.family.default};
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-family:${({ theme }) => theme.fonts.family.secondary};
+  }
+
 `;

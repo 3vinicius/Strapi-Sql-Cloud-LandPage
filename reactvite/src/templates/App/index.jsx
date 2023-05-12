@@ -1,16 +1,12 @@
+import { Heading } from '../../Components/Heading';
 import * as Styled from './styles';
-import P from 'prop-types';
 
 export const Home = () => {
   return (
     <div>
       <Styled.Wrapper background="">
-        <h1>Hello</h1>
+        <Heading colorDark={false}>Home</Heading>
       </Styled.Wrapper>
     </div>
   );
-};
-
-Home.propTypes = {
-  children: P.node.isRequired,
 };
