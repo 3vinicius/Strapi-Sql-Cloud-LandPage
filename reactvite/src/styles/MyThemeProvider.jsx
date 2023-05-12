@@ -5,6 +5,8 @@ import { GlobalStyles } from './global-styles';
 
 export const MyThemeProvider = ({ children }) => {
   return (
+    // ThemeProvider is a styled-components component that allows us
+    //to pass a theme to all styled-components in the app.
     <ThemeProvider theme={theme}>
       {children}
       <GlobalStyles />

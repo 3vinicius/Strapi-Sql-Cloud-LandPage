@@ -1,8 +1,8 @@
-import { App } from '.';
+import { Home } from '.';
 
 export default {
   title: 'App',
-  component: App,
+  component: Home,
   args: {
     children: 'Children padrão',
   },
@@ -11,4 +11,4 @@ export default {
   },
 };
 
-export const Template = (args) => <App {...args} />;
+export const Template = (args) => <Home {...args} />;

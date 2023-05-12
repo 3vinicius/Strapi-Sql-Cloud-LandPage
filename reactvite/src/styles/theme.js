@@ -1,6 +1,8 @@
 export const theme = {
   colors: {
-    primary: 'red',
-    secondary: 'blue',
+    mainBg: '#fff',
+    secondaryBg: 'blue',
   },
+  fonts: {},
+  spacings: {},
 };

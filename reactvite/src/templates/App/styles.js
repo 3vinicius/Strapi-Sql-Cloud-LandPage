@@ -1,5 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.h1`
-  background: ${({ theme }) => theme.colors.primary};
+export const Wrapper = styled.div`
+  ${({ background, theme }) => css`
+    background: ${background === '' ? theme.colors.secondaryBg : background};
+  `}
 `;
