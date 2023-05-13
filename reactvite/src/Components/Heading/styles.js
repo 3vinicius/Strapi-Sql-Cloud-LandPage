@@ -19,12 +19,18 @@ const titleSize = {
   `,
   big: (theme) => css`
   font-size: ${theme.fonts.sizes.xhuge} ;
+  ${mediaFonte(theme)}
 `,
 };
 
+const mediaFonte = (theme) => css`@media ${theme.myMedias.letMedium} {
+  font-size: ${theme.fonts.sizes.large};
+}`;
+
 export const Title = styled.h1`
-  ${({ theme, colorDark, size }) => css`
-    color: ${colorDark ? theme.colors.colorWhite : theme.colors.primaryColor};
-    ${titleSize[size](theme)};
+  ${({ theme, colorDark, size, uppercase }) => css`
+    color: ${colorDark ? theme.colors.colorWhite : theme.colors.colorWhite};
+    ${titleSize[size](theme)}
+    text-transform: ${uppercase ? 'uppercase' : 'none'};
   `}
 `;

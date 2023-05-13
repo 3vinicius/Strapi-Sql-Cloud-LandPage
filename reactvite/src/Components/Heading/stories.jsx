@@ -1,4 +1,5 @@
 import { Heading } from '.';
+import { theme } from '../../styles/theme';
 
 export default {
   title: 'Heading',
@@ -7,13 +8,35 @@ export default {
     children: 'O texto está escuro',
   },
   argsTypes: {
-    children: { type: 'strung' },
+    children: { type: 'string' },
   },
   parameters: {
-    background: {
+    backgrounds: {
       default: 'dark',
+      values: [
+        {
+          name: 'light',
+          value: theme.colors.mainBg,
+        },
+        {
+          name: 'dark',
+          value: theme.colors.secondaryBg,
+        },
+      ],
     },
   },
 };
+export const Dark = (args) => <Heading {...args} />;
+export const Light = (args) => <Heading {...args} />;
 
-export const Lig
+Light.parameters = {
+  backgrounds: {
+    default: 'light',
+    colorDark: false,
+  },
+};
+
+Dark.args = {
+  children: 'O texto está claro',
+  colorDark: true,
+};

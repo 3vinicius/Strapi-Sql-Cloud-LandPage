@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
     mainBg: '#fff',
-    secondaryBg: 'blue',
+    secondaryBg: '#0A1128',
     primaryColor: '#0A1128',
     colorWhite: '#fff',
   },
@@ -20,6 +20,9 @@ export const theme = {
       huge: '5.6rem',
       xhuge: '6.4rem',
     },
+  },
+  myMedias: {
+    letMedium: '(max-width:768px)',
   },
   spacings: {},
 };
