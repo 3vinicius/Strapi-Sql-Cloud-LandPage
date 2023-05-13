@@ -7,7 +7,7 @@ export default {
   args: {
     children: 'O texto está escuro',
   },
-  argsTypes: {
+  argTypes: {
     children: { type: 'string' },
   },
   parameters: {
