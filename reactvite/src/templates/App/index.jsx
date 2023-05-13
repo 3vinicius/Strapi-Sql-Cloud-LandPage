@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <div>
       <Styled.Wrapper background="">
-        <Heading colorDark={false}>Home</Heading>
+        <Heading colorDark={true}>Home</Heading>
       </Styled.Wrapper>
     </div>
   );

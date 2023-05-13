@@ -29,7 +29,7 @@ const mediaFonte = (theme) => css`@media ${theme.myMedias.letMedium} {
 
 export const Title = styled.h1`
   ${({ theme, colorDark, size, uppercase }) => css`
-    color: ${colorDark ? theme.colors.colorWhite : theme.colors.colorWhite};
+    color: ${colorDark ? theme.colors.colorWhite : theme.colors.primaryColor};
     ${titleSize[size](theme)}
     text-transform: ${uppercase ? 'uppercase' : 'none'};
   `}
