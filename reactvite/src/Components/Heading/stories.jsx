@@ -29,6 +29,9 @@ export default {
 export const Dark = (args) => <Heading {...args} />;
 export const Light = (args) => <Heading {...args} />;
 
+Light.args = {
+  colorDark: false,
+};
 Light.parameters = {
   backgrounds: {
     default: 'light',

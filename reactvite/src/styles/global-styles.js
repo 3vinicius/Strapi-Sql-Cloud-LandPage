@@ -22,4 +22,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family:${({ theme }) => theme.fonts.family.secondary};
   }
 
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
 `;

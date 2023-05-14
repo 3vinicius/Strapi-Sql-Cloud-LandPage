@@ -124,6 +124,12 @@ describe('<Heading/>', () => {
     const heading = container.querySelector(h);
     expect(heading.tagName.toLowerCase()).toBe(h);
   });
+
+  it('Should match snapshot', () => {
+    const { container } = renderTheme(<Heading>texto</Heading>);
+
+    expect(container).toMatchSnapshot();
+  });
 });
 
 // const titleSize = {
