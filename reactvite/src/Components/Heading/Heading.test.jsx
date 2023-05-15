@@ -71,6 +71,7 @@ describe('<Heading/>', () => {
     renderTheme(<Heading uppercase={true}>texto</Heading>);
 
     const heading = screen.getByRole('heading', { name: 'texto' });
+
     expect(heading).toHaveStyle({
       color: theme.colors.colorWhite,
       'font-size': theme.fonts.sizes.xhuge,

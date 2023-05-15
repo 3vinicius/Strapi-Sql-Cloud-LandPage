@@ -6,8 +6,8 @@ export const Container = styled.ul`
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    @media(${theme.myMedias.letMedium}){
-      flex-direction: column;
+    @media ${theme.myMedias.letMedium} {
+      flex-flow: column wrap;
       justify-content: center;
       align-items: center;
     }
