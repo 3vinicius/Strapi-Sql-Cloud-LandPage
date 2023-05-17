@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684226372145" clover="3.2.0">
-  <project timestamp="1684226372146" name="All files">
-    <metrics statements="15" coveredstatements="15" conditionals="7" coveredconditionals="6" methods="6" coveredmethods="6" elements="28" coveredelements="27" complexity="0" loc="15" ncloc="15" packages="5" files="5" classes="5"/>
+<coverage generated="1684349371018" clover="3.2.0">
+  <project timestamp="1684349371018" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="9" coveredconditionals="8" methods="7" coveredmethods="7" elements="34" coveredelements="33" complexity="0" loc="18" ncloc="18" packages="6" files="6" classes="6"/>
     <package name="Components.Heading">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\Heading\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="11" count="15" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="11" count="21" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.LogoLink">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\LogoLink\index.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.MenuLink">
