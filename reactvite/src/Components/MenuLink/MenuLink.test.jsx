@@ -58,9 +58,8 @@ describe('<MenuLink />', () => {
   });
 
   it('Should render correct snapshot', () => {
-    const { debug } = renderTheme(<MenuLink>children</MenuLink>);
+    renderTheme(<MenuLink>children</MenuLink>);
     screen.getByText('children');
-    debug();
   });
 
   it('should not apply animation, off hover', () => {
