@@ -4,7 +4,7 @@ import p from 'prop-types';
 
 export const NavBar = ({ links = [] }) => {
   return (
-    <Styled.Container>
+    <Styled.Container aria-label="Main menu">
       {links.map((link, index) => {
         return <MenuLink key={index} {...link} />;
       })}

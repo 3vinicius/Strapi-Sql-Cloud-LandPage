@@ -2,8 +2,12 @@ import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';
 
+const navVisible = () => css`
+  visibility: visible;
+  opacity:1;
+`;
 export const Container = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, visible }) => css`
   position: fixed;
   z-index: 5;
   top:0;
@@ -13,7 +17,6 @@ export const Container = styled.div`
   border-bottom: ${theme.colors.mediumGray} ;
   background: ${theme.colors.colorWhite} ;
   transition: all 300ms ease-in-out;
-
   & > ${SectionContainer}{
     padding-top:0;
     padding-bottom:0;
@@ -25,6 +28,9 @@ export const Container = styled.div`
   }
 
   @media ${theme.myMedias.letMedium} {
+    visibility: hidden;
+    opacity: 0;
+    ${visible && navVisible()}
     & > ${SectionContainer}{
     display: grid;
     grid-template-columns: 1fr;
@@ -59,7 +65,32 @@ export const MenuContainer = styled.div`
   `}
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
   ${({ theme }) => css`
+    cursor: pointer;
+    z-index: 6;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width:4rem;
+    height: 4rem;
+    background: ${theme.colors.primaryColor};
+    color:${theme.colors.colorWhite};
+    border: none;
+    display: none;
+
+
+
+    @media ${theme.myMedias.letMedium}{
+
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+
+    > svg {
+      width:2.5rem;
+      height:2.5rem;
+    }
   `}
 `;
