@@ -11,12 +11,12 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@styled-icons/material-outlined": "^10.47.0",
+    "@styled-icons/evil": "^10.46.0",
+    "@styled-icons/material": "^10.47.0",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "styled-components": "^5.3.5",
-    "styled-icons": "^10.47.0"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",

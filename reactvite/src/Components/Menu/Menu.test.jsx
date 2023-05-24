@@ -22,7 +22,7 @@ describe('<Menu />', () => {
         logoData={mockLogoData}
       />,
     );
-    expect
+    screen().g
   });
 
   it('Should render correct event <Menu />', () => {
