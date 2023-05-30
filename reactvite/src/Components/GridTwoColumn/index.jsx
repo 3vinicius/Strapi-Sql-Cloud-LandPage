@@ -24,5 +24,5 @@ GridTwoColumn.propTypes = {
   title: p.string.isRequired,
   text: p.string.isRequired,
   srcImg: p.string,
-  background: p.string.isRequired,
+  background: p.bool.isRequired,
 };

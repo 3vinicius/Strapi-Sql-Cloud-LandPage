@@ -5,11 +5,13 @@ import { Moon } from '@styled-icons/boxicons-regular/Moon';
 import { useState } from 'react';
 
 export const BtnDarkMode = () => {
-  const{} = useState
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <Styled.Container onClick={() => }>
-      <Sun />
-      <Moon />
+    <Styled.Container
+      onClick={() => setDarkMode((s) => !s)}
+      darkMode={darkMode}
+    >
+      {darkMode ? <Moon /> : <Sun />}
     </Styled.Container>
   );
 };
