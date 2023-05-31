@@ -6,7 +6,7 @@ export default {
   title: 'Footer',
   component: Footer,
   args: {
-    children: "<p><a href='https://localhost'>Feito por Vincius Amorim</a></p>",
+    html: `<p><a href='https://localhost'>Feito por Vincius Amorim</a></p>`,
   },
 };
 
