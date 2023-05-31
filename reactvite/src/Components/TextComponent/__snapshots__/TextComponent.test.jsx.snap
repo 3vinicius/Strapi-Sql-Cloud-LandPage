@@ -3,7 +3,7 @@
 exports[`<TextComponent /> Should render <TextComponent /> 1`] = `
 .c0 {
   font-size: 2.4rem;
-  color: #fff;
+  color: #0A1128;
 }
 
 <p

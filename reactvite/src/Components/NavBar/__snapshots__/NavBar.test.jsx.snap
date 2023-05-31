@@ -57,6 +57,7 @@ exports[`<NavBar /> Should render correct snapshot 1`] = `
 }
 
 <ul
+  aria-label="Main menu"
   class="c0"
 >
   <a

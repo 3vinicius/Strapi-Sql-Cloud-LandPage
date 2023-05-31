@@ -16,7 +16,7 @@ describe('<TextComponent />', () => {
     const div = screen.getByText('Hello');
     expect(div).toHaveStyle({
       'font-size': theme.fonts.sizes.medium,
-      color: theme.colors.colorWhite,
+      color: 'rgb(10, 17, 40)',
     });
   });
 });
