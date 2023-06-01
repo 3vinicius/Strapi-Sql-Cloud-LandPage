@@ -13,7 +13,7 @@ export const GridSection = ({
   return (
     <SectionBackground background={background}>
       <Styled.Container colorDark={background}>
-        <Heading uppercase size="big" as="h2">
+        <Heading uppercase colorDark={background} size="big" as="h2">
           {title}
         </Heading>
         <TextComponent colorDark={background}>{description}</TextComponent>

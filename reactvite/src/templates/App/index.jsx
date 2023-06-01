@@ -1,12 +1,7 @@
-import { Heading } from '../../Components/Heading';
-import * as Styled from './styles';
+import { Base } from '../Base';
+
+import { mockBase } from '../Base/stories';
 
 export const Home = () => {
-  return (
-    <div>
-      <Styled.Wrapper background="">
-        <Heading colorDark={true}>Home</Heading>
-      </Styled.Wrapper>
-    </div>
-  );
+  return <Base {...mockBase} />;
 };

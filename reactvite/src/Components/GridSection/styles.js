@@ -13,15 +13,6 @@ export const Container = styled.div`
   `}
 `;
 
-export const Grid = styled.div`
-  ${({ theme }) => css`
-    counter-reset: grid-counter;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: ${theme.spacings.large}
-  `}
-`;
-
 export const GridElement = styled.div`
   ${() => css`
   ${Title}{
@@ -37,5 +28,14 @@ export const GridElement = styled.div`
     left: -5rem;
     transform: rotate(5deg);
   }
+  `}
+`;
+
+export const Grid = styled.div`
+  ${({ theme }) => css`
+    counter-reset: grid-counter;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: ${theme.spacings.large}
   `}
 `;
