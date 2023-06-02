@@ -2,7 +2,7 @@
 
 exports[`<GridSection /> Should render <GridSection /> 1`] = `
 .c3 {
-  color: #fff;
+  color: #0A1128;
   font-size: 6.4rem;
   text-transform: uppercase;
 }
@@ -23,13 +23,6 @@ exports[`<GridSection /> Should render <GridSection /> 1`] = `
   background: #fff;
 }
 
-.c6 {
-  counter-reset: grid-counter;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-  gap: 3.2rem;
-}
-
 .c7 .c2 {
   position: relative;
   left: 5rem;
@@ -45,6 +38,13 @@ exports[`<GridSection /> Should render <GridSection /> 1`] = `
   -webkit-transform: rotate(5deg);
   -ms-transform: rotate(5deg);
   transform: rotate(5deg);
+}
+
+.c6 {
+  counter-reset: grid-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 3.2rem;
 }
 
 .c0 {

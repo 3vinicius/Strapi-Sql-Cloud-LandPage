@@ -5,7 +5,7 @@ exports[`<MenuLink /> Should render correct snapshot 1`] = `
   display: block;
   color: #0A1128;
   font-size: 1.6rem;
-  padding: 1.6rem;
+  padding: 0 1.6rem;
   position: relative;
 }
 

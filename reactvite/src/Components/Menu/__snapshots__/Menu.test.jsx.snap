@@ -90,7 +90,7 @@ exports[`<Menu /> Should render correct snapshot 1`] = `
   display: block;
   color: #0A1128;
   font-size: 1.6rem;
-  padding: 1.6rem;
+  padding: 0 1.6rem;
   position: relative;
 }
 
@@ -123,6 +123,7 @@ exports[`<Menu /> Should render correct snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin: 0px;
 }
 
 .c1 {
