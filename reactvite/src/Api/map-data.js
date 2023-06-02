@@ -1,12 +1,29 @@
 /* eslint-disable */
 export default function mapDate(pagesDate = [{}]) {
-  return {
-    html: pagesDate[0].html,
-    slug: pagesDate[0].slug,
-    title: pagesDate[0].title,
-    sections: pagesDate[0].sections,
-    menu: pagesDate[0].menu,
-  };
-}
 
+  return pagesDate.map((key) => {
+    const {html= '',
+    slug= '',
+    title= '',
+    sections= [],
+    menu= {},} = key
+
+  return {
+    html,
+    slug,
+    title,
+    sections,
+    menu,
+  };
+  })
+};
+
+
+// const {inspect} = require('util');
+
+// const dadosD = require('./dados.json');
+
+// const dates = mapDate(dadosD)[0].title
+
+// console.log(inspect(dates,null,null,true))
 

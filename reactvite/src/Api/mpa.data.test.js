@@ -1,18 +1,8 @@
 import mapDate from './map-data';
 
-const mock = [
-  {
-    html: '',
-    slug: '',
-    title: '',
-    sections: [],
-    menu: {},
-  },
-];
-
 describe('Sould test mapDara() ', () => {
   it('Render even if there is no date', () => {
-    const pages = mapDate(mock);
+    const pages = mapDate()[0];
     expect(pages.html).toBe('');
     expect(pages.slug).toBe('');
     expect(pages.title).toBe('');
@@ -29,7 +19,7 @@ describe('Sould test mapDara() ', () => {
   });
 
   it('Render correct dates', () => {
-    const pages = mapDate([{ html: `<p>Hello</p>` }]);
+    const pages = mapDate([{ html: `<p>Hello</p>` }])[0];
     expect(pages.html).toBe(`<p>Hello</p>`);
   });
 });
