@@ -1,3 +1,6 @@
+import mapLink from './map-link';
+import { mapSections } from './map-sectons';
+
 /* eslint-disable */
 export default function mapDate(pagesDate = [{}]) {
 
@@ -6,14 +9,14 @@ export default function mapDate(pagesDate = [{}]) {
     slug= '',
     title= '',
     sections= [],
-    menu= {},} = key
+    menu = {},} = key
 
   return {
     html,
     slug,
     title,
-    sections,
-    menu,
+    sections: mapSections(sections),
+    menu: mapLink(menu),
   };
   })
 };
