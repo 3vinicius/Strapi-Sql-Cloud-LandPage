@@ -1,6 +1,13 @@
 import mapDate from './map-data';
 import mapLink, { mapMenuLinks } from './map-link';
 import { mapSection } from './map-section';
+import {
+  mapSectionTwoColumns,
+  mapSections,
+  mapSectionContent,
+  mapTextGrid,
+  mapImageGrid,
+} from './map-sectons';
 import mockSection from './mock.section';
 
 /* This is on filed test for import json file
@@ -231,14 +238,290 @@ describe('Test function mapSection()', () => {
 });
 
 describe('Test function mapSections()', () => {
-  it('Render even if there is no date', () => {});
+  it('Render even if there is no date', () => {
+    const dateTwoColumns = mapSections();
+    expect(dateTwoColumns).toEqual([]);
+  });
+
+  it('Render dates if there is dates', () => {
+    const dateTwoColumns = mapSections(mockSection);
+    expect(dateTwoColumns).toEqual([
+      {
+        background: true,
+        component: 'section.section-two-columns',
+        sectionId: 'home',
+        srcImg:
+          'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749289/javascript_b57bf48cda.svg',
+        text: 'To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.',
+        title: 'January brings us Firefox 85',
+      },
+      {
+        background: false,
+        component: 'section.section-content',
+        html: '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p><p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p><p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various other improvements that are in the pipeline.</p>',
+        sectionId: 'intro',
+        title: 'news coverage and some surprises',
+      },
+      {
+        background: true,
+        component: 'section.section-grid-text',
+        description:
+          'Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut',
+        grid: [
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 1',
+          },
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 2',
+          },
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 3',
+          },
+        ],
+        sectionId: 'grid-one',
+        title: 'My Grid',
+      },
+      {
+        background: false,
+        component: 'section.section-grid-image',
+        description:
+          'Distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+        grid: [
+          {
+            altText: 'Uma paisagem com céu claro e montanhas bonitas',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_6a2049d13a.jpg',
+          },
+          {
+            altText: 'Um livro grande aberto',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_c073b11d09.jpg',
+          },
+          {
+            altText: 'Imagem do topo de uma cidade grande',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_2_38651a645b.jpg',
+          },
+          {
+            altText: 'Filme para câmeras antigas',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_9d32ada1f9.jpg',
+          },
+          {
+            altText: 'Tela de notebook com Webull',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_a1_973b2a68c9.jpg',
+          },
+          {
+            altText: 'Filme Kodak para câmeras antigas',
+            srcImg:
+              'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_b3fcbf1d93.jpg',
+          },
+        ],
+        sectionId: 'gallery',
+        title: 'Gallery',
+      },
+      {
+        background: true,
+        component: 'section.section-grid-text',
+        description:
+          ' Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio',
+        grid: [
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 1',
+          },
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 2',
+          },
+          {
+            description:
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+            title: 'Teste 3',
+          },
+        ],
+        sectionId: 'grid-two',
+        title: 'Outra grid',
+      },
+      {
+        background: false,
+        component: 'section.section-content',
+        html: '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p><p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p><figure class="table"><table><thead><tr><th>Title 1</th><th>Title 2</th><th>Title 3</th><th>Title 4</th><th>Title 5</th></tr></thead><tbody><tr><td>Content 1</td><td>Content 2</td><td>Content 3</td><td>Content 3</td><td>Content 3</td></tr><tr><td>Content 1</td><td>Content 2</td><td>Content 3</td><td>Content 3</td><td>Content 3</td></tr><tr><td>Content 1</td><td>Content 2</td><td>Content 3</td><td>Content 3</td><td>Content 3</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Testando</td></tr></tbody></table></figure>',
+        sectionId: 'pricing',
+        title: 'Pricing',
+      },
+      {
+        background: true,
+        component: 'section.section-two-columns',
+        sectionId: 'contact',
+        srcImg:
+          'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749289/javascript_b57bf48cda.svg',
+        text: 'To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.',
+        title: 'January brings us Firefox 85',
+      },
+    ]);
+  });
 });
 
-// {
-//   alternativeText: '',
-//   height: 0,
-//   name: '',
-//   size: 0,
-//   url: '',
-//   width: 0,
-// }
+describe('Test function mapSectionTwoColumns()', () => {
+  it('Render even if there is no date', () => {
+    const dateTwoColumns = mapSectionTwoColumns({});
+    expect(dateTwoColumns).toEqual({
+      component: '',
+      title: '',
+      text: '',
+      background: false,
+      sectionId: '',
+      srcImg: '',
+    });
+  });
+
+  it('Render dates if there is dates', () => {
+    const dateTwoColumns = mapSectionTwoColumns(mockSection[0]);
+    expect(dateTwoColumns).toEqual({
+      background: true,
+      component: 'section.section-two-columns',
+      sectionId: 'home',
+      srcImg:
+        'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749289/javascript_b57bf48cda.svg',
+      text: 'To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.',
+      title: 'January brings us Firefox 85',
+    });
+  });
+});
+
+describe('Test function mapSectionContent()', () => {
+  it('Render even if there is no date', () => {
+    const dateContent = mapSectionContent({});
+    expect(dateContent).toEqual({
+      background: false,
+      component: '',
+      html: '',
+      sectionId: '',
+      title: '',
+    });
+  });
+
+  it('Render dates if there is dates', () => {
+    const dateContent = mapSectionContent(mockSection[1]);
+    expect(dateContent).toEqual({
+      background: false,
+      component: 'section.section-content',
+      html: '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p><p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p><p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various other improvements that are in the pipeline.</p>',
+      sectionId: 'intro',
+      title: 'news coverage and some surprises',
+    });
+  });
+});
+
+describe('Test function mapTextGrid()', () => {
+  it('Render even if there is no date', () => {
+    const dateContent = mapTextGrid({});
+    expect(dateContent).toEqual({
+      component: 'section.section-grid-text',
+      title: '',
+      description: '',
+      background: false,
+      sectionId: '',
+      grid: [],
+    });
+  });
+
+  it('Render dates if there is dates', () => {
+    const dateContent = mapTextGrid(mockSection[2]);
+    expect(dateContent).toEqual({
+      background: true,
+      component: 'section.section-grid-text',
+      description:
+        'Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut',
+      grid: [
+        {
+          description:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+          title: 'Teste 1',
+        },
+        {
+          description:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+
+          title: 'Teste 2',
+        },
+        {
+          description:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+
+          title: 'Teste 3',
+        },
+      ],
+      sectionId: 'grid-one',
+      title: 'My Grid',
+    });
+  });
+});
+
+describe('Test function mapImageGrid()', () => {
+  it('Render even if there is no date', () => {
+    const dateContent = mapImageGrid({});
+    expect(dateContent).toEqual({
+      background: false,
+      component: 'section.section-grid-image',
+      description: '',
+      grid: [],
+      sectionId: '',
+      title: '',
+    });
+  });
+
+  it('Render dates if there is dates', () => {
+    const dateContent = mapImageGrid(mockSection[3]);
+    expect(dateContent).toEqual({
+      background: false,
+      component: 'section.section-grid-image',
+      description:
+        'Distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+      grid: [
+        {
+          altText: 'Uma paisagem com céu claro e montanhas bonitas',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_6a2049d13a.jpg',
+        },
+        {
+          altText: 'Um livro grande aberto',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_c073b11d09.jpg',
+        },
+        {
+          altText: 'Imagem do topo de uma cidade grande',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_2_38651a645b.jpg',
+        },
+        {
+          altText: 'Filme para câmeras antigas',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_9d32ada1f9.jpg',
+        },
+        {
+          altText: 'Tela de notebook com Webull',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_a1_973b2a68c9.jpg',
+        },
+        {
+          altText: 'Filme Kodak para câmeras antigas',
+          srcImg:
+            'https://res.cloudinary.com/dlizakp2a/image/upload/v1613749814/360x360_r_1_b3fcbf1d93.jpg',
+        },
+      ],
+      sectionId: 'gallery',
+      title: 'Gallery',
+    });
+  });
+});

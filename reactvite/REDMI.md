@@ -1,2 +1,2 @@
 -COVERAGE ``npm test -- --watchAll="false" --coverage``
-- 
+- Update snapshot ``npm test -- -u``
