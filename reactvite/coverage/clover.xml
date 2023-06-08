@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686245035740" clover="3.2.0">
-  <project timestamp="1686245035741" name="All files">
-    <metrics statements="109" coveredstatements="106" conditionals="102" coveredconditionals="79" methods="46" coveredmethods="43" elements="257" coveredelements="228" complexity="0" loc="109" ncloc="109" packages="19" files="22" classes="22"/>
+<coverage generated="1686248684467" clover="3.2.0">
+  <project timestamp="1686248684467" name="All files">
+    <metrics statements="101" coveredstatements="99" conditionals="101" coveredconditionals="79" methods="43" coveredmethods="42" elements="245" coveredelements="220" complexity="0" loc="101" ncloc="101" packages="16" files="19" classes="19"/>
     <package name="Api">
       <metrics statements="48" coveredstatements="47" conditionals="84" coveredconditionals="65" methods="20" coveredmethods="20"/>
       <file name="map-data.js" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Api\map-data.js">
@@ -66,32 +66,32 @@
       </file>
     </package>
     <package name="Components.BtnDarkMode">
-      <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\BtnDarkMode\index.jsx">
-        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.Footer">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\Footer\index.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.GoTop">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\GoTop\index.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.GridContent">
@@ -117,10 +117,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\GridSection\index.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="13" count="9" type="stmt"/>
-        <line num="22" count="27" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.GridTwoColumn">
@@ -136,102 +136,76 @@
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\Heading\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="11" count="69" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="11" count="33" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
       </file>
     </package>
     <package name="Components.LogoLink">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\LogoLink\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Components.Menu">
       <metrics statements="6" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\Menu\index.jsx">
         <metrics statements="6" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
-        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="13" count="9" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Components.MenuLink">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\MenuLink\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="10" count="109" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="91" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Components.NavBar">
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\NavBar\index.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="5" count="5" type="cond" truecount="0" falsecount="1"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="9" count="99" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="9" count="81" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Components.SectionBackground">
       <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\SectionBackground\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
       </file>
     </package>
     <package name="Components.SectionContainer">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\SectionContainer\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="13" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Components.TextComponent">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\Components\TextComponent\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="5" count="44" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-      </file>
-    </package>
-    <package name="templates.App">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\templates\App\index.jsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="templates.Base">
-      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\templates\Base\index.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="templates.Home">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.jsx" path="C:\Users\amori\Documents\estudos\estudos\project-strap\reactvite\src\templates\Home\index.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
       </file>
     </package>
   </project>

@@ -59,4 +59,17 @@ describe('<Menu />', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('Should not render links <Menu />', () => {
+    renderTheme(<Menu logoData={mockLogoData} />);
+    const nav = screen.getByLabelText('Main menu');
+
+    fireEvent.click(nav);
+
+    expect(screen.getByLabelText('Close Menu')).toBeInTheDocument();
+
+    fireEvent.click(nav);
+
+    expect(screen.getByLabelText('Open Menu')).toBeInTheDocument();
+  });
 });

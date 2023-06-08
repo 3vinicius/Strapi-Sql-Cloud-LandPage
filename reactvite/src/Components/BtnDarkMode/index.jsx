@@ -8,10 +8,15 @@ export const BtnDarkMode = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <Styled.Container
+      aria-label="btn-DarkMode"
       onClick={() => setDarkMode((s) => !s)}
       darkMode={darkMode}
     >
-      {darkMode ? <Moon /> : <Sun />}
+      {darkMode ? (
+        <Moon aria-label="onDarkMode" />
+      ) : (
+        <Sun aria-label="offDarkMode" />
+      )}
     </Styled.Container>
   );
 };

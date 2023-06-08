@@ -12,7 +12,7 @@ module.exports = {
     '!<rootDir>/**/stories.{js,jsx,ts,tsx}',
     '!<rootDir>/src/styles/*.{js,jsx,ts,tsx}',
     '!<rootDir>/node_modules/',
-    '!<rootDir>/src/styles/tempates/**/*.{js,jsx,ts,tsx}',
+    '!<rootDir>/src/templates/**/*.{js,jsx,ts,tsx}',
   ],
   testEnvironment: 'jsdom',
   testMatch: [
