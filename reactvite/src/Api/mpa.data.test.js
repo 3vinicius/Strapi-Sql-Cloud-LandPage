@@ -269,6 +269,11 @@ describe('Test function mapSections()', () => {
     expect(dateTwoColumns).toEqual([]);
   });
 
+  it('Return section if no defined __component ', () => {
+    const dateTwoColumns = mapSections([{ __component: test }]);
+    expect(dateTwoColumns[0]).toEqual({ __component: test });
+  });
+
   it('Render dates if there is dates', () => {
     const dateTwoColumns = mapSections(mockSection);
     expect(dateTwoColumns).toEqual([
