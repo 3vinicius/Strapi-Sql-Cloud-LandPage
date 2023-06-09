@@ -21,11 +21,11 @@ export const mapSection = (array = [{}]) => {
   });
 };
 
-function mapGridImags(grid = []) {
+export function mapGridImags(grid = []) {
   return grid.map((element) => mapImage(element));
 }
 
-function mapImage(image = {}) {
+export function mapImage(image = {}) {
   const {
     name = '',
     alternativeText = '',
@@ -44,7 +44,7 @@ function mapImage(image = {}) {
   };
 }
 
-function mapGrid(grid = []) {
+export function mapGrid(grid = [{}]) {
   return grid.map((g) => {
     const { title = '', description = '' } = g;
     return {

@@ -4,7 +4,14 @@ import mock from './mock';
 
 describe('<GridSection />', () => {
   it('Should render <GridSection />', () => {
-    const { container } = renderTheme(<GridSection {...mock} />);
+    const { container } = renderTheme(
+      <GridSection {...mock} background={false} />,
+    );
     expect(container).toMatchSnapshot();
+  });
+
+  it('Should render deaul others propries <GridSection />', () => {
+    const { container } = renderTheme(<GridSection {...mock} />);
+    expect(container).toBeInTheDocument();
   });
 });

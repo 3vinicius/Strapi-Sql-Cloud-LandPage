@@ -15,6 +15,12 @@ describe('<NavBar />', () => {
     expect(tagName[1]).toBeVisible();
   });
 
+  it('Should render defautl mode', () => {
+    renderTheme(<NavBar />);
+    const container = screen.queryByAltText('Main menu');
+    expect(container).toBeNull();
+  });
+
   it('Should render correct styles from <NavBar />', () => {
     const { container } = renderTheme(<NavBar links={mock} />);
 

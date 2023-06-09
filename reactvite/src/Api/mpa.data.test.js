@@ -1,6 +1,6 @@
 import mapDate from './map-data';
 import mapLink, { mapMenuLinks } from './map-link';
-import { mapSection } from './map-section';
+import { mapSection, mapGridImags, mapImage, mapGrid } from './map-section';
 import {
   mapSectionTwoColumns,
   mapSections,
@@ -90,10 +90,17 @@ describe('Test function mapData() ', () => {
 describe('Test function mapMenu()', () => {
   it('Should reder even if there is no date ', () => {
     const dates = mapLink({});
+
     expect(dates.newTab).toBe(false);
     expect(dates.text).toBe('');
     expect(dates.link).toBe('');
     expect(dates.links).toEqual([]);
+
+    const datesDefault = mapLink();
+    expect(datesDefault.newTab).toBe(false);
+    expect(datesDefault.text).toBe('');
+    expect(datesDefault.link).toBe('');
+    expect(datesDefault.links).toEqual([]);
   });
 
   it('Should reder date if there has date ', () => {
@@ -144,6 +151,9 @@ describe('Test function mapSection()', () => {
     });
     expect(section.text_grid).toEqual([]);
     expect(section.image_grid).toEqual([]);
+
+    const sectionDefault = mapSection()[0];
+    expect(sectionDefault.title).toBe('');
   });
 
   it('Should return map dates if items passed', () => {
@@ -234,6 +244,22 @@ describe('Test function mapSection()', () => {
         width: 0,
       },
     ]);
+  });
+});
+
+describe('Test function mapGridImags(), mapImage(), mapGrid()', () => {
+  it('should render default values mapGridImags()', () => {
+    const gridImg = mapGridImags();
+    expect(gridImg).toEqual([]);
+  });
+
+  it('should render default values mapImage()', () => {
+    expect(mapImage().name).toBe('');
+  });
+
+  it('should render default values mapGrid()', () => {
+    expect(mapGrid()[0].title).toBe('');
+    expect(mapGrid()[0].description).toBe('');
   });
 });
 
