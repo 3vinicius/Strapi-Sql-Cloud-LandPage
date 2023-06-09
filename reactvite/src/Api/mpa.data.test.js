@@ -274,6 +274,14 @@ describe('Test function mapSections()', () => {
     expect(dateTwoColumns[0]).toEqual({ __component: test });
   });
 
+  it('Return default text_grid and image_grid', () => {
+    const dateTwoColumns = mapSections([
+      { __component: 'section.section-grid' },
+    ]);
+    expect(dateTwoColumns[0].text_grid).toEqual([]);
+    expect(dateTwoColumns[0].image_grid).toEqual([]);
+  });
+
   it('Render dates if there is dates', () => {
     const dateTwoColumns = mapSections(mockSection);
     expect(dateTwoColumns).toEqual([
@@ -405,7 +413,7 @@ describe('Test function mapSections()', () => {
 
 describe('Test function mapSectionTwoColumns()', () => {
   it('Render even if there is no date', () => {
-    const dateTwoColumns = mapSectionTwoColumns({});
+    const dateTwoColumns = mapSectionTwoColumns();
     expect(dateTwoColumns).toEqual({
       component: '',
       title: '',
@@ -432,7 +440,7 @@ describe('Test function mapSectionTwoColumns()', () => {
 
 describe('Test function mapSectionContent()', () => {
   it('Render even if there is no date', () => {
-    const dateContent = mapSectionContent({});
+    const dateContent = mapSectionContent();
     expect(dateContent).toEqual({
       background: false,
       component: '',
@@ -456,14 +464,19 @@ describe('Test function mapSectionContent()', () => {
 
 describe('Test function mapTextGrid()', () => {
   it('Render even if there is no date', () => {
-    const dateContent = mapTextGrid({});
+    const dateContent = mapTextGrid();
     expect(dateContent).toEqual({
       component: 'section.section-grid-text',
       title: '',
       description: '',
       background: false,
       sectionId: '',
-      grid: [],
+      grid: [
+        {
+          description: '',
+          title: '',
+        },
+      ],
     });
   });
 
@@ -506,7 +519,7 @@ describe('Test function mapImageGrid()', () => {
       background: false,
       component: 'section.section-grid-image',
       description: '',
-      grid: [],
+      grid: [{ srcImg: '', altText: '' }],
       sectionId: '',
       title: '',
     });

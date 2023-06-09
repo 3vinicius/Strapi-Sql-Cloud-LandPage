@@ -22,7 +22,7 @@ describe('<MenuLink />', () => {
       display: 'block',
       color: theme.colors.primaryColor,
       'font-size': theme.fonts.sizes.lsmall,
-      padding: theme.spacings.lsmall,
+      padding: '0px 1.6rem',
       position: 'relative',
     });
   });
@@ -34,7 +34,7 @@ describe('<MenuLink />', () => {
       display: 'block',
       color: theme.colors.primaryColor,
       'font-size': theme.fonts.sizes.lsmall,
-      padding: theme.spacings.lsmall,
+      padding: '0px 1.6rem',
       position: 'relative',
     });
   });
