@@ -24,7 +24,7 @@ export const mockBase = {
     link: '#target',
     srcImg: '',
   },
-  footerHtml: `<p>Test Footer </p>`,
+  footerHtml: '<p>Test Footer </p>',
 };
 
 export default {
