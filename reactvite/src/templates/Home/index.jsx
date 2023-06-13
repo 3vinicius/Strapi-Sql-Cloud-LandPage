@@ -5,28 +5,34 @@ import mapDate from '../../Api/map-data';
 import { PageNotFound } from '../PageNotFound';
 
 export const Home = () => {
-  const [jsonDate, setJsonDate] = useState();
+  const [jsonDate, setJsonDate] = useState([]);
 
   useEffect(() => {
-    try {
-      const load = async () => {
-        const data = await fetch('http://localhost:320/dataJson');
+    const load = async () => {
+      try {
+        const data = await fetch('http://localhost:3020/dataJson');
         const json = await data.json();
         console.log(json);
         const datesJson = mapDate(json);
-        setJsonDate(datesJson[0]);
-      };
-      load();
-    } catch (e) {
-      setJsonDate(undefined);
-    }
+        await new Promise((e) =>
+          setTimeout(() => {
+            setJsonDate(datesJson[0]);
+            e();
+          }, 10000),
+        );
+      } catch (e) {
+        setJsonDate(undefined);
+      }
+    };
+    load();
   }, []);
 
-  if (jsonDate == undefined) {
-    return <PageNotFound />;
-  }
-  if (jsonDate.slug == null) {
+  if (jsonDate && !jsonDate.slug) {
+    console.log('oi');
     return <h1>Carregando.....</h1>;
+  }
+  if (jsonDate === undefined) {
+    return <PageNotFound />;
   }
   if (jsonDate.slug == 'landing-page') {
     console.log(jsonDate);
