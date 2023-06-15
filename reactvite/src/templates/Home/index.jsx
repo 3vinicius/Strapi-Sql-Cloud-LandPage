@@ -1,8 +1,11 @@
 import { mockBase } from '../Base/stories';
-import { Base } from '../Base';
 import { useEffect, useState } from 'react';
+
 import mapDate from '../../Api/map-data';
+
+import { Base } from '../Base';
 import { PageNotFound } from '../PageNotFound';
+import { Loading } from '../Loading';
 
 export const Home = () => {
   const [jsonDate, setJsonDate] = useState([]);
@@ -18,7 +21,7 @@ export const Home = () => {
           setTimeout(() => {
             setJsonDate(datesJson[0]);
             e();
-          }, 10000),
+          }, 1000),
         );
       } catch (e) {
         setJsonDate(undefined);
@@ -29,7 +32,7 @@ export const Home = () => {
 
   if (jsonDate && !jsonDate.slug) {
     console.log('oi');
-    return <h1>Carregando.....</h1>;
+    return <Loading />;
   }
   if (jsonDate === undefined) {
     return <PageNotFound />;
