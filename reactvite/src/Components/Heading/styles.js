@@ -20,6 +20,7 @@ const titleSize = {
   big: (theme) => css`
   font-size: ${theme.fonts.sizes.xhuge} ;
   ${mediaFonte(theme)}
+
 `,
 };
 
