@@ -64,10 +64,10 @@ export const Home = () => {
             return <GridContent key={key} {...section} />;
           }
           if (section.component === 'section.section-grid-text') {
-            console.log({ ...section });
             return <GridText key={key} {...section} />;
           }
           if (section.component === 'section.section-grid-image') {
+            console.log({ ...section });
             return <GridImage key={key} {...section} />;
           }
         })}
