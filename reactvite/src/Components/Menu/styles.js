@@ -28,6 +28,7 @@ export const Container = styled.div`
     margin-bottom:0;
   }
 
+
   @media ${theme.myMedias.letMedium} {
     visibility: hidden;
     opacity: 0;
@@ -39,6 +40,11 @@ export const Container = styled.div`
     height: 100vh;
     align-items: start;
     overflow-y: auto;
+
+    body{
+      overflow: hidden;
+    }
+
   }
 
   & ${Heading}{
@@ -76,7 +82,8 @@ export const Button = styled.button`
     height: 4rem;
     background: ${theme.colors.primaryColor};
     color:${theme.colors.colorWhite};
-    border: none;
+    border: 1px solid #060a18;
+    box-shadow: 0px 0px 5px 2px #00000054;
     display: none;
 
 

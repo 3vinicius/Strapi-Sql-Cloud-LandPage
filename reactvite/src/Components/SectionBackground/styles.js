@@ -9,10 +9,11 @@ export const Container = styled.div`
   ${({ theme, background }) => css`
     background: ${theme.colors.colorWhite};
     color: ${theme.colors.primaryColor};
+    padding-top: ${theme.spacings.xhuge};
 
     ${background && darkMode(theme)};
     min-height: 100vh;
-    display: flex;
+    display: block;
     align-items: center;
   `}
 `;

@@ -5,7 +5,7 @@ export const Container = styled.div`
   ${({ theme, colorDark }) => css`
     text-align: center;
     max-width: 58rem;
-    margin: 0 auto;
+    margin: auto;
     font-size: ${theme.fonts.sizes.medium};
     ${darkMode(colorDark)}
     ;

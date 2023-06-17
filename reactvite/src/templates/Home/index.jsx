@@ -54,14 +54,11 @@ export const Home = () => {
         {sections.map((section, index) => {
           const key = `${slug}-${index}`;
 
-          /* GridTwoColumn} from '../../Components/GridTwoColumn';
-          import {GridSection} from '../../Components/GridSection';
-          import {GridImage} from '../../Components/GridImage';
-          import {GridContent} */
           if (section.component === 'section.section-two-columns') {
             return <GridTwoColumn key={key} {...section} />;
           }
           if (section.component === 'section.section-content') {
+            console.log(section);
             return <GridContent key={key} {...section} />;
           }
           if (section.component === 'section.section-grid-text') {

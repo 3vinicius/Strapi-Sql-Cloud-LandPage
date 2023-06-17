@@ -42,4 +42,16 @@ export const GlobalStyles = createGlobalStyle`
     padding:  ${({ theme }) => theme.spacings.medium};
   }
 
+
+table{
+  width: 100%;
+}
+
+@media(max-width: 650px){
+  .table{
+    width: 100%;
+    overflow: auto;
+}
+}
+
 `;

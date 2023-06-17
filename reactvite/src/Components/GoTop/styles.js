@@ -16,6 +16,9 @@ export const Container = styled.a`
   z-index: 6;
   opacity: 0.7;
   transition: all 0.5s ease-out  ;
+  border: 1px solid #060a18;
+  box-shadow: 0px 0px 5px 2px #00000054;
+
 
   &:hover{
     opacity: 1;
