@@ -19,6 +19,7 @@ export const Container = styled.div`
     & > *:first-child{
     max-width: 100rem;
     margin: auto;
+    padding: ${theme.spacings.medium};
   }
   `}
 

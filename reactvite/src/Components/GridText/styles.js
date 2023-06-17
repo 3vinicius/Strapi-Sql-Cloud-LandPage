@@ -30,14 +30,17 @@ export const GridElement = styled.div`
     ${HeadingContainer} {
       position: relative;
       left: 5rem;
+      line-height: 80px;
     }
-
+  & > p {
+    margin-top: 0px;
+  }
     ${HeadingContainer}::before {
       counter-increment: grid-counter;
       content: counter(grid-counter);
       position: absolute;
       font-size: 7rem;
-      top: -3rem;
+      top: 0rem;
       left: -5rem;
       transform: rotate(5deg);
     }
