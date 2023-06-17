@@ -17,6 +17,7 @@ export const Container = styled.div`
   border-bottom: ${theme.colors.mediumGray} ;
   background: ${theme.colors.colorWhite} ;
   transition: all 300ms ease-in-out;
+  box-shadow: 0px 1px 5px #00000070;
   & > ${SectionContainer}{
     padding-top:0;
     padding-bottom:0;
@@ -36,9 +37,8 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows:1fr;
     height: 100vh;
-    align-items: center;
+    align-items: start;
     overflow-y: auto;
-
   }
 
   & ${Heading}{

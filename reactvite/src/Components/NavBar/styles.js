@@ -11,6 +11,7 @@ export const Container = styled.ul`
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+      gap:45px;
     }
   `}
 `;
