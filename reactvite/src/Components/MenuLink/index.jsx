@@ -4,9 +4,10 @@ import p from 'prop-types';
 
 export const MenuLink = ({
   children,
-  href = `${theme.links.myGithub}`,
-  target = '_blank',
+  link = `${theme.links.myGithub}`,
+  target = '_self',
 }) => {
+  const href = link;
   return (
     <Styled.Container href={href} target={target}>
       {children}
@@ -16,6 +17,6 @@ export const MenuLink = ({
 
 MenuLink.propTypes = {
   children: p.node.isRequired,
-  href: p.string,
+  link: p.string,
   target: p.oneOf(['_blank', '_self']),
 };

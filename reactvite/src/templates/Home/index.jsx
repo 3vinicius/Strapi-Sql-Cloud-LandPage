@@ -20,6 +20,9 @@ export const Home = () => {
         const data = await fetch('http://localhost:3020/dataJson');
         const json = await data.json();
         const datesJson = mapDate(json);
+
+        console.log(json);
+        console.log(datesJson);
         await new Promise((e) =>
           setTimeout(() => {
             setJsonDate(datesJson[0]);
@@ -42,7 +45,6 @@ export const Home = () => {
   if (jsonDate.slug == 'landing-page') {
     const { menu, footerHtml, sections, slug } = jsonDate;
     const { links, text, link, srcImg } = menu;
-    console.log(menu);
     return (
       <Base
         links={links}

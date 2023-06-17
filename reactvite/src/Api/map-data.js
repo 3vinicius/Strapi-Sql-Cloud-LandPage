@@ -8,11 +8,13 @@ export default function mapDate(pagesDate = [{}]) {
     const {html= '',
     slug= '',
     title= '',
+    footer_text:footerHtml='',
     sections= [],
     menu = {},} = key
 
   return {
     html,
+    footerHtml,
     slug,
     title,
     sections: mapSections(sections),
