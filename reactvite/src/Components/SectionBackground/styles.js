@@ -15,5 +15,12 @@ export const Container = styled.div`
     min-height: 100vh;
     display: block;
     align-items: center;
+
+    & > *:first-child{
+    max-width: 100rem;
+    margin: auto;
+  }
   `}
+
+
 `;
