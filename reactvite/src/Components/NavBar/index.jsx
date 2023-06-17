@@ -16,7 +16,7 @@ NavBar.propTypes = {
   links: p.arrayOf(
     p.shape({
       children: p.string.isRequired,
-      target: p.string.isRequired,
+      target: p.string,
       href: p.string.isRequired,
     }),
   ),

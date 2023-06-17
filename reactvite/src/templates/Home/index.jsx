@@ -1,4 +1,3 @@
-import { mockBase } from '../Base/stories';
 import { useEffect, useState } from 'react';
 
 import mapDate from '../../Api/map-data';
@@ -43,12 +42,12 @@ export const Home = () => {
   if (jsonDate.slug == 'landing-page') {
     const { menu, footerHtml, sections, slug } = jsonDate;
     const { links, text, link, srcImg } = menu;
-
+    console.log(menu);
     return (
       <Base
-        links={link}
+        links={links}
         footerHtml={footerHtml}
-        logoData={(text, links, srcImg)}
+        logoData={(text, link, srcImg)}
       >
         {sections.map((section, index) => {
           const key = `${slug}-${index}`;
@@ -67,7 +66,6 @@ export const Home = () => {
             return <GridText key={key} {...section} />;
           }
           if (section.component === 'section.section-grid-image') {
-            console.log({ ...section });
             return <GridImage key={key} {...section} />;
           }
         })}
