@@ -7,7 +7,6 @@ export const MenuLink = ({
   href = `${theme.links.myGithub}`,
   target = '_blank',
 }) => {
-  console.log(children);
   return (
     <Styled.Container href={href} target={target}>
       {children}

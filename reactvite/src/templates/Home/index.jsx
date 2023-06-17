@@ -47,7 +47,7 @@ export const Home = () => {
       <Base
         links={links}
         footerHtml={footerHtml}
-        logoData={(text, link, srcImg)}
+        logoData={{ text, link, srcImg }}
       >
         {sections.map((section, index) => {
           const key = `${slug}-${index}`;

@@ -3,6 +3,8 @@ import p from 'prop-types';
 import { Heading } from '../Heading/index';
 
 export const LogoLink = ({ scrImg, text, link }) => {
+  console.log('chegou date in logoLink');
+  console.log({ scrImg, text, link });
   return (
     <Heading size="small" uppercase>
       <Styled.Container href={link}>
