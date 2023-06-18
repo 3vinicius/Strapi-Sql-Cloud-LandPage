@@ -21,8 +21,6 @@ export const Home = () => {
         const json = await data.json();
         const datesJson = mapDate(json);
 
-        console.log(json);
-        console.log(datesJson);
         await new Promise((e) =>
           setTimeout(() => {
             setJsonDate(datesJson[0]);
@@ -45,6 +43,9 @@ export const Home = () => {
   if (jsonDate.slug == 'landing-page') {
     const { menu, footerHtml, sections, slug } = jsonDate;
     const { links, text, link, srcImg } = menu;
+
+    console.log(links);
+
     return (
       <Base
         links={links}
@@ -53,19 +54,41 @@ export const Home = () => {
       >
         {sections.map((section, index) => {
           const key = `${slug}-${index}`;
-
+          console.log(section);
           if (section.component === 'section.section-two-columns') {
-            return <GridTwoColumn key={key} {...section} />;
+            return (
+              <GridTwoColumn
+                key={key}
+                {...section}
+                {...section}
+                id={section.sectionId}
+              />
+            );
           }
           if (section.component === 'section.section-content') {
-            console.log(section);
-            return <GridContent key={key} {...section} />;
+            return (
+              <GridContent key={key} {...section} id={section.sectionId} />
+            );
           }
           if (section.component === 'section.section-grid-text') {
-            return <GridText key={key} {...section} />;
+            return (
+              <GridText
+                key={key}
+                {...section}
+                {...section}
+                id={section.sectionId}
+              />
+            );
           }
           if (section.component === 'section.section-grid-image') {
-            return <GridImage key={key} {...section} />;
+            return (
+              <GridImage
+                key={key}
+                {...section}
+                {...section}
+                id={section.sectionId}
+              />
+            );
           }
         })}
       </Base>

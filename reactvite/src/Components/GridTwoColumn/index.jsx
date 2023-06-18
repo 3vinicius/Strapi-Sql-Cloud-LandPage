@@ -4,10 +4,16 @@ import { SectionBackground } from '../SectionBackground/index.jsx';
 import { Heading } from '../Heading/index.jsx';
 import { TextComponent } from '../TextComponent/index.jsx';
 
-export const GridTwoColumn = ({ title, text, srcImg, background = false }) => {
+export const GridTwoColumn = ({
+  title,
+  text,
+  srcImg,
+  background = false,
+  id,
+}) => {
   return (
     <SectionBackground background={background}>
-      <Styled.Container background={background} id="grid-two">
+      <Styled.Container background={background} id={id}>
         <Styled.TextContainer>
           <Heading uppercase as="h2">
             {title}
@@ -27,4 +33,5 @@ GridTwoColumn.propTypes = {
   text: p.string.isRequired,
   srcImg: p.string,
   background: p.bool,
+  id: p.string,
 };
