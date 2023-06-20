@@ -22,7 +22,3 @@ export const PageNotFound = () => {
     </Container>
   );
 };
-
-PageNotFound.propTypes = {
-  children: p.node.isRequired,
-};

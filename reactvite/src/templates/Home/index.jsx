@@ -17,13 +17,18 @@ export const Home = () => {
   useEffect(() => {
     const load = async () => {
       try {
-        const data = await fetch('http://localhost:3020/dataJson');
+        //const data2 = await fetch('http://localhost:3020/dataJson');
+        const data = await fetch(
+          'http://localhost:1337/api/pages?populate=deep',
+        );
+
         const json = await data.json();
-        const datesJson = mapDate(json);
+        console.log([json.data[0].attributes]);
+        // const datesJson = mapDate(json.data[1].attributes);
 
         await new Promise((e) =>
           setTimeout(() => {
-            setJsonDate(datesJson[0]);
+            setJsonDate([{}]);
             e();
           }, 1000),
         );
@@ -34,6 +39,8 @@ export const Home = () => {
     load();
   }, []);
 
+  console.log(mapDate(jsonDate));
+
   if (jsonDate && !jsonDate.slug) {
     return <Loading />;
   }
@@ -43,8 +50,6 @@ export const Home = () => {
   if (jsonDate.slug == 'landing-page') {
     const { menu, footerHtml, sections, slug } = jsonDate;
     const { links, text, link, srcImg } = menu;
-
-    console.log(links);
 
     return (
       <Base
