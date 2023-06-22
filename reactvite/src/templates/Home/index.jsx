@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import mapDate from '../../Api/map-data';
+import { mapData as mapDate } from '../../Api/MyAPI/map-data';
 
 import { Base } from '../Base';
 import { PageNotFound } from '../PageNotFound';
@@ -23,12 +23,12 @@ export const Home = () => {
         );
 
         const json = await data.json();
-        console.log([json.data[0].attributes]);
-        // const datesJson = mapDate(json.data[1].attributes);
+        console.log(json.data[0].attributes);
+        const datesJson = mapDate(json.data[0].attributes);
 
         await new Promise((e) =>
           setTimeout(() => {
-            setJsonDate([{}]);
+            setJsonDate(datesJson);
             e();
           }, 1000),
         );
@@ -39,7 +39,7 @@ export const Home = () => {
     load();
   }, []);
 
-  console.log(mapDate(jsonDate));
+  console.log(jsonDate);
 
   if (jsonDate && !jsonDate.slug) {
     return <Loading />;
@@ -47,10 +47,9 @@ export const Home = () => {
   if (jsonDate === undefined) {
     return <PageNotFound />;
   }
-  if (jsonDate.slug == 'landing-page') {
+  if (jsonDate.slug == 'landpage') {
     const { menu, footerHtml, sections, slug } = jsonDate;
     const { links, text, link, srcImg } = menu;
-
     return (
       <Base
         links={links}
@@ -59,8 +58,9 @@ export const Home = () => {
       >
         {sections.map((section, index) => {
           const key = `${slug}-${index}`;
-          console.log(section);
+
           if (section.component === 'section.section-two-columns') {
+            console.log(section);
             return (
               <GridTwoColumn
                 key={key}

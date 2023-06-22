@@ -13,24 +13,26 @@ export const GridText = ({
   id,
 }) => {
   return (
-    <SectionBackground background={background} sectionId={sectionId}>
-      <Styled.Container id={id}>
-        <Heading size="big" uppercase colorDark={background} as="h2">
-          {title}
-        </Heading>
-        <TextComponent colorDark={true}>{description}</TextComponent>
-        <Styled.Grid>
-          {grid.map((el) => (
-            <Styled.GridElement key={el.title}>
-              <Heading size="medium" colorDark={background} as="h3">
-                {el.title}
-              </Heading>
-              <TextComponent colorDark={true}>{el.description}</TextComponent>
-            </Styled.GridElement>
-          ))}
-        </Styled.Grid>
-      </Styled.Container>
-    </SectionBackground>
+    <div id={id}>
+      <SectionBackground background={background} sectionId={sectionId}>
+        <Styled.Container>
+          <Heading size="big" uppercase colorDark={background} as="h2">
+            {title}
+          </Heading>
+          <TextComponent colorDark={true}>{description}</TextComponent>
+          <Styled.Grid>
+            {grid.map((el) => (
+              <Styled.GridElement key={el.title}>
+                <Heading size="medium" colorDark={background} as="h3">
+                  {el.title}
+                </Heading>
+                <TextComponent colorDark={true}>{el.description}</TextComponent>
+              </Styled.GridElement>
+            ))}
+          </Styled.Grid>
+        </Styled.Container>
+      </SectionBackground>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ export function mapLink(menuDate = {}) {
   const {
     open_in_new_tab: newTab = false,
     logo_text: text = '',
-    logo: { url: srcImg } = '',
+    logo: { url: srcImg } = '', //no have url in logo
     logo_link: link = '',
     menu_links: links = [],
   } = menuDate;
