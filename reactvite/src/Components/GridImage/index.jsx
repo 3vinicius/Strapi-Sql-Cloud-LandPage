@@ -6,21 +6,23 @@ import { TextComponent } from '../TextComponent';
 
 export const GridImage = ({ background, title, description, grid, id }) => {
   return (
-    <SectionBackground background={background}>
-      <Styled.Container colorDark={background} id={id}>
-        <Heading uppercase size="big" as="h2" colorDark={background}>
-          {title}
-        </Heading>
-        <TextComponent colorDark={background}>{description}</TextComponent>
-        <Styled.Grid>
-          {grid.map((element) => (
-            <Styled.GridElement key={element.id}>
-              <Styled.Imagem src={element.srcImg} alt={element.altText} />
-            </Styled.GridElement>
-          ))}
-        </Styled.Grid>
-      </Styled.Container>
-    </SectionBackground>
+    <div id={id}>
+      <SectionBackground background={background}>
+        <Styled.Container colorDark={background}>
+          <Heading uppercase size="big" as="h2" colorDark={background}>
+            {title}
+          </Heading>
+          <TextComponent colorDark={background}>{description}</TextComponent>
+          <Styled.Grid>
+            {grid.map((element) => (
+              <Styled.GridElement key={element.id}>
+                <Styled.Imagem src={element.srcImg} alt={element.altText} />
+              </Styled.GridElement>
+            ))}
+          </Styled.Grid>
+        </Styled.Container>
+      </SectionBackground>
+    </div>
   );
 };
 

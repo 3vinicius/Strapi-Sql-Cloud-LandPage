@@ -14,7 +14,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: ${theme.spacings.large};
-    @media ${theme.myMedias.letMedium}{
+    @media(max-width: 850px){
       grid-template-columns: 1fr;
       text-align: center;
     }
@@ -44,5 +44,15 @@ export const ImgContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  @media(max-width: 850px){
+      width: 400px;
+    }
+  @media ${theme.myMedias.letMedium}{
+    width:300px;
+  }
+  `}
 `;

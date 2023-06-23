@@ -6,16 +6,18 @@ import p from 'prop-types';
 
 export const GridContent = ({ title, background, html, id }) => {
   return (
-    <SectionBackground background={background}>
-      <Styled.Container id={id}>
-        <Heading uppercase colorDark={background} as="h2">
-          {title}
-        </Heading>
-        <Styled.Html>
-          <TextComponent colorDark={background}>{html}</TextComponent>
-        </Styled.Html>
-      </Styled.Container>
-    </SectionBackground>
+    <div id={id}>
+      <SectionBackground background={background}>
+        <Styled.Container>
+          <Heading uppercase colorDark={background} as="h2">
+            {title}
+          </Heading>
+          <Styled.Html>
+            <TextComponent colorDark={background}>{html}</TextComponent>
+          </Styled.Html>
+        </Styled.Container>
+      </SectionBackground>
+    </div>
   );
 };
 
