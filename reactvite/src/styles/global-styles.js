@@ -43,15 +43,36 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-table{
+  table{
   width: 100%;
 }
 
-@media(max-width: 650px){
-  .table{
-    width: 100%;
-    overflow: auto;
+
+.table{
+  @media(max-width: 650px){
+  width: 100%;
+  overflow: auto;
 }
+}
+
+tr{
+  padding: 30px;
+  height: 50px;
+  @media(max-width: 650px){
+    height: 100px;
+  }
+}
+
+td{
+  padding: 10px
+}
+
+.container-icon-footer{
+  padding-bottom: 20px;
+}
+
+.container-icon-footer > a {
+  margin-left: 20px;
 }
 
 `;

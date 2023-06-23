@@ -40,7 +40,7 @@ export const TextContainer = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  ${({ theme }) => css``}
+  ${() => css``}
 `;
 
 export const Img = styled.img`

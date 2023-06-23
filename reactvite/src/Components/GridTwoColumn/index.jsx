@@ -12,19 +12,21 @@ export const GridTwoColumn = ({
   id,
 }) => {
   return (
-    <SectionBackground background={background}>
-      <Styled.Container background={background} id={id}>
-        <Styled.TextContainer>
-          <Heading uppercase as="h2">
-            {title}
-          </Heading>
-          <TextComponent>{text}</TextComponent>
-        </Styled.TextContainer>
-        <Styled.ImgContainer>
-          <Styled.Img src={srcImg} alt={title} />
-        </Styled.ImgContainer>
-      </Styled.Container>
-    </SectionBackground>
+    <div id={id}>
+      <SectionBackground background={background}>
+        <Styled.Container background={background}>
+          <Styled.TextContainer>
+            <Heading uppercase as="h2">
+              {title}
+            </Heading>
+            <TextComponent>{text}</TextComponent>
+          </Styled.TextContainer>
+          <Styled.ImgContainer>
+            <Styled.Img src={srcImg} alt={title} />
+          </Styled.ImgContainer>
+        </Styled.Container>
+      </SectionBackground>
+    </div>
   );
 };
 
